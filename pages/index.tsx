@@ -17,7 +17,6 @@ import { PageSEO } from '@/components/SEO';
 import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import Heading from '@/components/homepage/Heading';
-import BlogLinks from '@/components/homepage/BlogLinks';
 import PopularTags from '@/components/homepage/PopularTags';
 
 const MAX_DISPLAY = 3;
@@ -50,21 +49,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <div className="mt-8 dark:divide-gray-700 md:mt-8">
         <Greeting />
         <div className="flex flex-col justify-between md:my-4 md:pb-8 xl:flex-row">
-          <Avatar />
-          {/* <div className="max-h-[430px] overflow-hidden rounded-md">
-            <Image src={'/static/images/avatar.jpg'} alt="avatar" width={430} height={350} />
-          </div> */}
-          <div className="my-auto flex flex-col text-lg leading-8 text-gray-600 dark:text-gray-400">
             <Heading />
-            <TypedBios />
-            <ShortDescription />
-            <BlogLinks />
-            <SpotifyNowPlaying />
-            <p className="flex">
-              <span className="mr-2">Happy reading</span>
-              <Twemoji emoji="clinking-beer-mugs" />
-            </p>
-          </div>
         </div>
       </div>
 
