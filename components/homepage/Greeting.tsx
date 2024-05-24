@@ -8,6 +8,8 @@ const Greeting = () => {
 
   return (
     <div className={className}>
+      <br>
+      <br>
       Hello, folks! <span className="font-bold">Discover my stories and creative ideas.</span>
     </div>
   );
