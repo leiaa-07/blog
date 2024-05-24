@@ -26,24 +26,6 @@ const popularTags: PopularTag[] = [
     slug: 'nestjs',
     title: 'NestJS',
   },
-  {
-    href: '/tags/react',
-    iconType: 'React',
-    slug: 'react',
-    title: 'React',
-  },
-  {
-    href: '/tags/database',
-    iconType: 'Mongodb',
-    slug: 'database',
-    title: 'Database',
-  },
-  {
-    href: '/tags/devops',
-    iconType: 'Docker',
-    slug: 'devops',
-    title: 'Devops',
-  },
 ];
 
 export default popularTags;
