@@ -1,5 +1,3 @@
-import BuildWith from './BuildWith';
-
 export default function Footer() {
   return (
     <footer>
