@@ -16,7 +16,6 @@ import Twemoji from '@/components/Twemoji';
 import { PageSEO } from '@/components/SEO';
 import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
-import Heading from '@/components/homepage/Heading';
 import PopularTags from '@/components/homepage/PopularTags';
 
 const MAX_DISPLAY = 3;
@@ -48,9 +47,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       {/* Introduce myself */}
       <div className="mt-8 dark:divide-gray-700 md:mt-8">
         <Greeting />
-        <div className="flex flex-col justify-between md:my-4 md:pb-8 xl:flex-row">
-            <Heading />
-        </div>
       </div>
 
       <PopularTags />
