@@ -17,12 +17,8 @@ import { PageSEO } from '@/components/SEO';
 import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import Heading from '@/components/homepage/Heading';
-import TypedBios from '@/components/homepage/TypedBios';
-import ShortDescription from '@/components/homepage/ShortDescription';
 import BlogLinks from '@/components/homepage/BlogLinks';
-import SpotifyNowPlaying from '@/components/homepage/SpotifyNowPlaying';
 import PopularTags from '@/components/homepage/PopularTags';
-import Avatar from '@/components/homepage/Avatar';
 
 const MAX_DISPLAY = 3;
 
