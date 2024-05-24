@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 import Image from '@/components/Image';
 import ProfileInfo from '@/components/homepage/ProfileInfo';
-import SpotifyNowPlaying from '@/components/homepage/SpotifyNowPlaying';
 
 const ProfileCard = () => {
   const ref = useRef(null);
