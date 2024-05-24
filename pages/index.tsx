@@ -89,15 +89,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                         </div>
                         <div className="prose max-w-none text-gray-500 dark:text-gray-400">{summary}</div>
                       </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary hover:text-sky-600 dark:hover:text-sky-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
+              
                     </div>
                   </div>
                 </article>
