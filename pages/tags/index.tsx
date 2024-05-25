@@ -37,7 +37,7 @@ export default function Tags({ tags }: { tags: TagCounts }) {
           {sortedTags.map((tag) => {
             return (
               <div key={tag} className="mb-2 mr-5 mt-2">
-                <tag text={Tag} />
+                <Tag text={Tag} />
                 <Link
                   href={`/tags/${kebabCase(tag)}`}
                   className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
