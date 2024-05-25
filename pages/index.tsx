@@ -49,14 +49,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <Greeting />
       </div>
 
-      <div className="md:space-y-4">
-        <div className="space-y-1">
-          <h2 className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400">
-            test
-          </h2>
-        </div>
-      </div>
-
       {/* List all post */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 py-6 md:space-y-5">
