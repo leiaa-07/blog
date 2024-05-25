@@ -47,6 +47,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       {/* Introduce myself */}
       <div className="mt-20 dark:divide-gray-700 md:mt-20">
         <Greeting />
+        <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
+          Welcome to my website!
+        </p>
       </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="py-6 md:py-8">
@@ -55,6 +58,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </h1>
         </div>
       </div>
+
 
       {/* List all post */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
