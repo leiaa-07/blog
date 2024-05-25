@@ -51,9 +51,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
 
       <div className="md:space-y-4">
         <div className="space-y-1">
-          <h1 className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400">
+          <h2 className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400">
             test
-          </h1>
+          </h2>
         </div>
       </div>
 
