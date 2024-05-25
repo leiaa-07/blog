@@ -11,7 +11,7 @@ const Greeting = () => {
       <div className="mb-4">
         welcome <span className="font-bold">to leia's blog! :)</span>
       </div>
-      <div className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7 mb-4">
+      <div className="mb-4·text-base·text-gray-500·dark:text-gray-400·md:text-lg·md:leading-7">
         current life update:
       </div>
     </div>
