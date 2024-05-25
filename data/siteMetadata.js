@@ -2,14 +2,14 @@
 /** @type {import("pliny/config").PlinyConfig } */
 
 const siteMetadata = {
-  title: "leia",
-  author: 'Trong Khanh',
-  fullName: 'Do Trong Khanh',
-  headerTitle: "leia",
-  description: 'My desire to practice my skills and share my acquired knowledge fuels my endeavors.',
+  title: "",
+  author: 'leia mayssa',
+  fullName: 'leia mayssa',
+  headerTitle: "leia's blog! :)",
+  description: '',
   language: 'en-us',
   theme: 'system',
-  siteUrl: 'https://karhdo.dev',
+  siteUrl: 'https://leia-mayssa.vercel.app/',
   analyticsURL:
     "https://analytics.us.umami.is/share/LwbQOMMcBOK9zcwU/Karhdo's%20Blog%20-%20Karhdo's%20Coding%20Adventure",
   siteRepo: 'https://github.com/Karhdo/karhdo.dev',
