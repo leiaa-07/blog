@@ -49,7 +49,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <Greeting />
       </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 py-6 md:space-y-5">
+        <div className="py-6 md:py-8">
           <h1 className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
             test
           </h1>
