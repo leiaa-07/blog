@@ -49,6 +49,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <Greeting />
       </div>
 
+      <PopularTags />
+
       {/* List all post */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 py-6 md:space-y-5">
