@@ -9,6 +9,11 @@ const Greeting = () => {
   return (
     <div className={className}>
       welcome <span className="font-bold">to leia's blog! :)</span>
+       <div className="space-y-2 py-6 md:space-y-5">
+        <p className="text-base text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
+          test
+        </p>
+      </div>
     </div>
   );
 };
