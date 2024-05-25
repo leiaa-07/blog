@@ -50,8 +50,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       </div>
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 py-3 md:space-y-5">
-          <h1 className="text-lg font-bold leading-9 tracking-tight text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
+        <div className="space-y-2 py-2 md:space-y-5">
+          <h1 className="text-lg font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
             test
           </h1>
         </div>
