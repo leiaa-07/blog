@@ -5,7 +5,7 @@ const siteMetadata = {
   title: "leia",
   author: 'Trong Khanh',
   fullName: 'Do Trong Khanh',
-  headerTitle: "Karhdo's Blog",
+  headerTitle: "leia",
   description: 'My desire to practice my skills and share my acquired knowledge fuels my endeavors.',
   language: 'en-us',
   theme: 'system',
