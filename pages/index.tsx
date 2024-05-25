@@ -45,15 +45,15 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <PageSEO title={`${headerTitle} - ${title}`} description={description} />
 
       {/* Introduce myself */}
-      <div className="mt-5 dark:divide-gray-700 md:mt-20">
+      <div className="mt-20 dark:divide-gray-700">
         <Greeting />
       </div>
 
       <div className="md:space-y-4">
         <div className="space-y-1">
-          <h2 className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400 md:text-lg md:leading-7">
+          <p className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400">
             test
-          </h2>
+          </p>
         </div>
       </div>
 
