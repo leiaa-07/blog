@@ -49,7 +49,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <Greeting />
       </div>
       <div className="flex items-start">
-        <p className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400" style={{ marginTop: '-10px' }}>test</p>
+        <p className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400" style={{ transform: 'translateY(-10px)' }}>test</p>
       </div>
 
       {/* List all post */}
