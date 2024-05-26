@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 import type { Authors } from 'contentlayer/generated';
-import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
 
 import siteMetadata from '@/data/siteMetadata';
 import Image from '@/components/Image';
