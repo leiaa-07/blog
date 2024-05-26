@@ -48,7 +48,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <div className="mt-20 dark:divide-gray-700">
         <Greeting />
       </div>
-      <p className="-mt-10 text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400">test</p>
+      <p className="-mt-10 text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400">current status (26/5)</p>
 
       {/* List all post */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
