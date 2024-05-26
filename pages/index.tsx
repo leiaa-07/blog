@@ -48,9 +48,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <div className="mt-20 dark:divide-gray-700">
         <Greeting />
       </div>
-      <div className="flex items-start">
-        <p className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400" style={{ transform: 'translateY(-10px)' }}>test</p>
-      </div>
+      <p className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400" style={{ transform: 'translateY(-10px)' }}>test</p>
 
       {/* List all post */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
