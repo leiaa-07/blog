@@ -8,7 +8,6 @@ import { PageSEO } from '@/components/SEO';
 
 interface Props {
   children: ReactNode;
-  content: Omit<Authors, '_id' | '_raw' | 'body'>;
 }
 
 export default function AuthorLayout({ children, content }: Props) {
