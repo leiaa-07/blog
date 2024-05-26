@@ -38,22 +38,6 @@ export default function AuthorLayout({ children, content }: Props) {
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
 
-            <div className="mt-2 flex gap-3">
-              <Link href={`mailto:${email}`}>
-                <Mail size={24} strokeWidth={1} />
-              </Link>
-              <Link href={github} target="_blank">
-                <Github size={24} strokeWidth={1} />
-              </Link>
-              <Link href={linkedin} target="_blank">
-                <Linkedin size={24} strokeWidth={1} />
-              </Link>
-              <Link href={twitter} target="_blank">
-                <Twitter size={24} strokeWidth={1} />
-              </Link>
-            </div>
-          </div>
-
           <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">{children}</div>
         </div>
       </div>
