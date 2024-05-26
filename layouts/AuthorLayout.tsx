@@ -18,7 +18,7 @@ export default function AuthorLayout({ children, content }: Props) {
   const description = 'My professional career, experiences, and skills.';
 
   return (
-    <>
+    <div>
       <PageSEO title={`about me - ${headerTitle} - ${title}`} description={description} />
 
       <div className="about divide-y divide-gray-200 dark:divide-gray-700">
@@ -39,6 +39,6 @@ export default function AuthorLayout({ children, content }: Props) {
           <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">{children}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
