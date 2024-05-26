@@ -11,7 +11,7 @@ const siteMetadata = {
   theme: 'system',
   siteUrl: 'https://leia-mayssa.vercel.app/',
   analyticsURL:
-    "https://analytics.us.umami.is/share/LwbQOMMcBOK9zcwU/Karhdo's%20Blog%20-%20Karhdo's%20Coding%20Adventure",
+    "https://analytics.us.umami.is/websites/56844b03-7fd7-460a-9618-8a62a6c9119d",
   siteRepo: 'https://github.com/Karhdo/karhdo.dev',
   siteLogo: '/static/images/avatar.jpg',
   image: '/static/images/avatar.jpg',
