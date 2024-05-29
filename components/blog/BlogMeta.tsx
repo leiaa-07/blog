@@ -17,11 +17,6 @@ const BlogMeta = ({ date, slug, readingTime }: BlogMetaProps) => {
         <Twemoji emoji="hourglass-not-done" size="1" />
         <span className="ml-1.5 md:ml-2">{Math.ceil(readingTime.minutes)} mins read</span>
       </div>
-      <span className="mx-2">{` • `}</span>
-      <div className="flex items-center">
-        <Twemoji emoji="eye" size="" />
-        <ViewCounter className="ml-1.5 md:ml-2" slug={slug} />
-      </div>
     </dd>
   );
 };
