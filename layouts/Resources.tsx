@@ -18,7 +18,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-export default function PostLayout({ content, next, prev, children }: LayoutProps) {
+export default function PostLayout({ content, children }: LayoutProps) {
   const { path, slug, date, title, tags, readingTime } = content;
 
   return (
