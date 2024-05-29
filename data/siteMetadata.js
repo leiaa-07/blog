@@ -29,7 +29,7 @@ const siteMetadata = {
     facebook: 'karhdo.dev',
   },
   analytics: {
-    umamiWebsiteId: '7b7953a7-de2e-4e30-9a29-1a4aee05c627',
+    umamiWebsiteId: '56844b03-7fd7-460a-9618-8a62a6c9119d',
   },
   newsletter: {
     provider: 'buttondown',
