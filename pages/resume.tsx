@@ -16,7 +16,7 @@ export default function Resume({ author }: InferGetStaticPropsType<typeof getSta
   return (
     <MDXLayoutRenderer
       layout={author.layout || DEFAULT_LAYOUT}
-      content={author}
+      content={au}
       MDXComponents={MDXComponents}
       toc={author.toc}
     />
