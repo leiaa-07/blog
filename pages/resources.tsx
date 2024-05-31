@@ -8,7 +8,7 @@ import { MDXComponents } from '@/components/MDXComponents';
 const DEFAULT_LAYOUT = 'Resources';
 
 export const getStaticProps = async () => {
-  const resources = allAuthors.find((p) => p.slug === 'resources');
+  const resources = 'resources';
 
   return { props: { resources } };
 };
