@@ -30,7 +30,6 @@ export default function AuthorLayout({ children, content }: Props) {
         </div>
 
           <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">{children}</div>
-        </div>
       </div>
     </>
   );
