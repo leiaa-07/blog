@@ -5,6 +5,9 @@ import resources from 'data/resources.mdx';
 
 const DEFAULT_LAYOUT = 'Resources';
 
+export const getStaticProps = async () => {
+  const resources = allAuthors.find((p) => p.slug === 'resources');
+
 export default function Resources({ content }: InferGetStaticPropsType<typeof getStaticProps>) {
   return <MDXLayoutRenderer layout={DEFAULT_LAYOUT} content={resources} MDXComponents={MDXComponents} />;
 }
