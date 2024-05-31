@@ -7,7 +7,7 @@ import { MDXComponents } from '@/components/MDXComponents';
 const DEFAULT_LAYOUT = 'AuthorLayout';
 
 export const getStaticProps = async () => {
-  const author = allAuthors.find((p) => p.slug === 'esources');
+  const author = allAuthors.find((p) => p.slug === 'resources');
 
   if (!author) {
     return { notFound: true };
