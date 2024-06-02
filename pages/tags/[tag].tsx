@@ -50,7 +50,7 @@ export default function Tag({ blogs, tag, tagCounts }: { blogs: Blog[]; tag: str
     <>
       <PageSEO title={`blog - ${headerTitle} - ${title}`} description={description} />
 
-      <ListLayoutWithTags posts={blogs} tagCounts={tagCounts} title={`Tag: ${capitalize(tag)}`} />
+      <ListLayoutWithTags posts={blogs} tagCounts={tagCounts} title={`tag: ${capitalize(tag)}`} />
     </>
   );
 }
