@@ -72,7 +72,6 @@ export const Authors = defineDocumentType(() => ({
 
 export const Resources = defineDocumentType(() => ({
   name: 'Resources',
-  filePathPattern: 'resources.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
