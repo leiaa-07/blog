@@ -1,14 +1,18 @@
+// import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { InferGetStaticPropsType } from 'next';
+import { allAuthors } from 'contentlayer/generated';
 import { MDXLayoutRenderer } from 'pliny/mdx-components';
+
 import { MDXComponents } from '@/components/MDXComponents';
-import resourcesContent from '@/data/resources.mdx';
 
 const DEFAULT_LAYOUT = 'Resources';
 
 export const getStaticProps = async () => {
-  return { props: { resourcesContent } };
+  const resources = allAuthors.find((p) => p.slug === 'resources');
+
+  return { props: { resources } };
 };
 
-export default function Resources({ resourcesContent }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <MDXLayoutRenderer layout={DEFAULT_LAYOUT} content={resourcesContent} MDXComponents={MDXComponents} />;
+export default function Resources({ resources }) {
+  return <MDXLayoutRenderer layout={resources.layout || DEFAULT_LAYOUT} content={resources} MDXComponents={MDXComponents} />;
 }
