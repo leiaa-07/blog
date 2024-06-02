@@ -2,7 +2,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 
 const siteMetadata = {
-  title: "",
+  title: "leia's blog! :)",
   author: 'leia mayssa',
   fullName: 'leia mayssa',
   headerTitle: "leia's blog! :)",
