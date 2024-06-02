@@ -42,7 +42,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         }}
       />
 
-      <PageSEO title={`${headerTitle} - ${title}`} description={description} />
+      <PageSEO title={`${title}`} description={description} />
 
       {/* Introduce myself */}
       <div className="mt-20 dark:divide-gray-700">
