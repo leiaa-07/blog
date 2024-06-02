@@ -10,9 +10,9 @@ export const getStaticProps = async () => {
   const resources = allAuthors.find((p) => p.slug === 'resources');
 };
 
-return { props: { author } };
+  return { props: { resources } };
 };
 
-export default function Resources() {
+export default function Resources({ resources }: InferGetStaticPropsType<typeof getStaticProps>) {
   return <MDXLayoutRenderer layout={DEFAULT_LAYOUT} content={resources} MDXComponents={MDXComponents} />;
 }
