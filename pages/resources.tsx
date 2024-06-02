@@ -5,6 +5,7 @@ import resourcesContent from 'data/resources.mdx';
 
 const DEFAULT_LAYOUT = 'Resources';
 
+export const getStaticProps = async () => {
   return { props: { resourcesContent } };
 };
 
