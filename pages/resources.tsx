@@ -1,7 +1,7 @@
 import { InferGetStaticPropsType } from 'next';
 import { MDXLayoutRenderer } from 'pliny/mdx-components';
 import { MDXComponents } from '@/components/MDXComponents';
-import resourcesContent from 'data/resources.mdx';
+import resourcesContent from '@/data/resources.mdx';
 
 const DEFAULT_LAYOUT = 'Resources';
 
