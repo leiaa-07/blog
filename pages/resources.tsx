@@ -8,8 +8,6 @@ const DEFAULT_LAYOUT = 'Resources';
 
 export const getStaticProps = async () => {
   const resources = allAuthors.find((p) => p.slug === 'resources');
-};
-
   return { props: { resources } };
 };
 
