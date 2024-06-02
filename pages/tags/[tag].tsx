@@ -41,14 +41,14 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
 
 export default function Tag({ blogs, tag, tagCounts }: { blogs: Blog[]; tag: string; tagCounts: TagCounts }) {
   if (!tag) {
-    return <div>No tags found.</div>;
+    return <div>no tags found :(</div>;
   }
 
   const { title, headerTitle, description } = siteMetadata;
 
   return (
     <>
-      <PageSEO title={`Blog - ${headerTitle} - ${title}`} description={description} />
+      <PageSEO title={`blog - ${headerTitle} - ${title}`} description={description} />
 
       <ListLayoutWithTags posts={blogs} tagCounts={tagCounts} title={`Tag: ${capitalize(tag)}`} />
     </>
