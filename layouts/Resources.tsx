@@ -8,12 +8,9 @@ import { PageSEO } from '@/components/SEO';
 
 interface Props {
   children: ReactNode;
-  content: Omit<Authors, '_id' | '_raw' | 'body'>;
 }
 
-export default function Resources({ children, content }: Props) {
-  const { name, avatar, occupation, company, email, twitter, linkedin, github } = content;
-
+export default function Resources({ children }: Props) {
   const { title, headerTitle } = siteMetadata;
 
   const description = 'My professional career, experiences, and skills.';
