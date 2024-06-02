@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
 export default function Resources({ resourcesContent }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <MDXLayoutRenderer
-      layout={resourcesContent.layout || DEFAULT_LAYOUT}
+      layout={DEFAULT_LAYOUT}
       content={resourcesContent}
       MDXComponents={MDXComponents}
     />
