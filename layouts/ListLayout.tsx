@@ -74,12 +74,12 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </h1>
           <div className="relative max-w-lg">
             <label>
-              <span className="sr-only">search articles</span>
+              <span className="sr-only">search posts</span>
               <input
-                aria-label="search articles"
+                aria-label="search posts"
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder="search articles"
+                placeholder="search posts"
                 className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
               />
             </label>
