@@ -5,7 +5,7 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components';
 
 import { MDXComponents } from '@/components/MDXComponents';
 
-const DEFAULT_LAYOUT = 'AuthorLayout';
+const DEFAULT_LAYOUT = 'Resources';
 
 export const getStaticProps = async () => {
   const author = allAuthors.find((p) => p.slug === 'resources');
@@ -13,6 +13,6 @@ export const getStaticProps = async () => {
   return { props: { author } };
 };
 
-export default function About({ author }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Resources({ author }: InferGetStaticPropsType<typeof getStaticProps>) {
   return <MDXLayoutRenderer layout={author.layout || DEFAULT_LAYOUT} content={author} MDXComponents={MDXComponents} />;
 }
