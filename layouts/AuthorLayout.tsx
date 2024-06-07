@@ -16,7 +16,7 @@ export default function AuthorLayout({ children, content }: Props) {
 
   const { title, headerTitle } = siteMetadata;
 
-  const description = 'My professional career, experiences, and skills.';
+  const description = 'hallo wassup';
 
   return (
     <>
