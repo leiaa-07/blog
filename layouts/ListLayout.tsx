@@ -103,7 +103,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredBlogPosts.length && 'no posts found lol'}
           {displayPosts.map((post) => {
             const { path, date, title, summary, tags } = post;
             return (
