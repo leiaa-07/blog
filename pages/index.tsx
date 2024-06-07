@@ -49,7 +49,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <Greeting />
       </div>
       <p
-        className="sm:text-2x1 text-base font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400"
+        className="text-2x1 font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400"
         style={{ marginTop: '-20px' }}
       >
         current status (26/5): grinding scholarship apps x_x
