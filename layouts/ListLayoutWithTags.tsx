@@ -99,7 +99,7 @@ export default function ListLayoutWithTags({
                 href={`/blog`}
                 className="font-bold uppercase text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
               >
-                All Posts
+                all posts
               </Link>
             )}
             <ul>
