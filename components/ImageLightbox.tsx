@@ -61,7 +61,7 @@ const ImageLightbox = ({ src, closeLightbox }: ImageLightBoxProps) => {
       <div className="relative flex h-full w-full items-center justify-center">
         <div className="absolute inset-x-0 top-0 flex justify-between">
           <button className="p-4 text-xl text-white" onClick={handleClose}>
-            Esc
+            esc
           </button>
           <button className="p-4" onClick={handleClose}>
             <Twemoji emoji="cross-mark" />
