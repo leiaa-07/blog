@@ -84,7 +84,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               />
             </label>
             <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              or you can search by tags by clicking on them :)
+              or you can search by tags by clicking on them
             </p>
             <svg
               className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
