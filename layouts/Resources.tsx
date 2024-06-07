@@ -13,7 +13,7 @@ interface Props {
 export default function Resources({ children }: Props) {
   const { title, headerTitle } = siteMetadata;
 
-  const description = 'My professional career, experiences, and skills.';
+  const description = 'some resources (mainly math) that i thought i'd share :D';
 
   return (
     <>
