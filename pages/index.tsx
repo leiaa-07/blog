@@ -119,7 +119,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       )} */}
     </div>
   );
-};
+}
 
 const Article: React.FC = () => {
   return (
