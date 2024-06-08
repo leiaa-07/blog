@@ -125,14 +125,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
 
 const BlogPost: React.FC = () => {
   useEffect(() => {
-    const comments = document.createElement("hyvor-talk-comments");
+    const comments = document.createElement('hyvor-talk-comments');
     comments.setAttribute('website-id', '11257');
     comments.setAttribute('page-id', '');
-    document.getElementById("comments-wrap")?.appendChild(comments);
+    document.getElementById('comments-wrap')?.appendChild(comments);
 
     return () => {
       // Cleanup function: remove the created element when the component is unmounted
-      document.getElementById("comments-wrap")?.removeChild(comments);
+      document.getElementById('comments-wrap')?.removeChild(comments);
     };
   }, []); // Run once when the component mounts
 
