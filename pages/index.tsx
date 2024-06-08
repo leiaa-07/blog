@@ -18,7 +18,6 @@ import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import PopularTags from '@/components/homepage/PopularTags';
 
-import { HyvorTalkEmbed } from 'hyvor-talk-react';
 import { Embed, CommentCount } from 'hyvor-talk-react-typescript';
 import React from 'react';
 
