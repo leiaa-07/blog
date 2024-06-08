@@ -118,7 +118,7 @@ const Home: React.FC<{ posts: Blog[] }> = ({ posts }) => {
       )} */}
     </div>
   );
-}
+};
 
 const BlogPost: React.FC = () => {
   useEffect(() => {
