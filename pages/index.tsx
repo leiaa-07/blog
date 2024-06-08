@@ -120,18 +120,20 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   );
 }
 
-export const Article: React.FC = () => {
+const Article: React.FC = () => {
   return (
     <div>
       <h1>Article Title</h1>
 
       <div className="comment-count-view">
         {/* Comment Counts */}
-        <CommentCount websiteId={11257} id={about} />
+        <CommentCount websiteId={11257} id={''} />
       </div>
 
       {/* Load Comments now */}
-      <Embed websiteId={11257} id={about} />
+      <Embed websiteId={11257} id={''} />
     </div>
   );
 };
+
+export { Article };
