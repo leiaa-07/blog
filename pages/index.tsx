@@ -134,7 +134,7 @@ const Article: React.FC = () => {
       <content>Your Article Here</content>
 
       {/* Load Comments now */}
-      <Embed websiteId={YOUR_WEBSITE_ID} id={WEBPAGE_IDENTIFIER} />
+      <Embed websiteId={11257} id={} />
     </div>
   );
 };
