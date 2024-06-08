@@ -6,7 +6,7 @@ const siteMetadata = {
   author: 'leia mayssa',
   fullName: 'leia mayssa',
   headerTitle: "leia's blog! :)",
-  description: 'nom nom leia's very cool blog',
+  description: 'nom nom come visit my very slay blog',
   language: 'en-us',
   theme: 'system',
   siteUrl: 'https://leia-mayssa.vercel.app/',
