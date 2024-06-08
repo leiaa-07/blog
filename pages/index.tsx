@@ -18,8 +18,8 @@ import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import PopularTags from '@/components/homepage/PopularTags';
 
-import { addComments } from '@hyvor/hyvor-talk-base';
-import React from 'react';
+import { Embed, CommentCount } from 'hyvor-talk-react-typescript';
+import React, {useEffect} from 'react';
 
 const MAX_DISPLAY = 3;
 
@@ -120,13 +120,20 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   );
 }
 
-addComments(
-    {
-        'website-id': 1,
-        'page-id': 'unique-page-id',
-    }, 
-    document.getElementById('comments-container'), 
-    (event, data) => {
-        console.log(event, data);
-    }
-);
+const Article: React.FC = () => {
+  return (
+    <div>
+      <h1>Article Title</h1>
+
+      <div className="comment-count-view">
+        {/* Comment Counts */}
+        <CommentCount websiteId={11257} />
+      </div>
+
+      {/* Load Comments now */}
+      <Embed websiteId={11257} />
+    </div>
+  );
+};
+
+export { Article };
