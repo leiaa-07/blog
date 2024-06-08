@@ -21,8 +21,6 @@ import PopularTags from '@/components/homepage/PopularTags';
 import { HyvorTalkEmbed } from 'hyvor-talk-react';
 import React, { useEffect } from 'react';
 
-export default BlogPost;
-
 const MAX_DISPLAY = 3;
 
 export const getStaticProps = async () => {
