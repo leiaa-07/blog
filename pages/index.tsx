@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
   return { props: { posts } };
 };
 
-export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+const Home: React.FC<{ posts: Blog[] }> = ({ posts }) => {
   const { headerTitle, title, description } = siteMetadata;
 
   return (
