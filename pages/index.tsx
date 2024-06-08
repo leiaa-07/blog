@@ -130,8 +130,6 @@ const Article: React.FC = () => {
         <CommentCount websiteId={11257} id={''} />
       </div>
 
-      <content>Your Article Here</content>
-
       {/* Load Comments now */}
       <Embed websiteId={11257} id={''} />
     </div>
