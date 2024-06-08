@@ -14,7 +14,7 @@
     "migrate:postgres": "dotenv -e .env.local -- npx prisma migrate deploy"
   },
   "dependencies": {
-    "@hyvor/hyvor-talk-base": "0.0.6",
+    "hyvor-talk-react-typescript": "1.0.2",
     "@next/bundle-analyzer": "13.1.6",
     "@next/font": "13.1.6",
     "@octokit/graphql": "^7.0.1",
