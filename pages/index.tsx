@@ -128,13 +128,13 @@ const Article: React.FC = () => {
 
       <div className="comment-count-view">
         {/* Comment Counts */}
-        <CommentCount websiteId={11257} id={} />
+        <CommentCount websiteId={11257} id={''} />
       </div>
 
       <content>Your Article Here</content>
 
       {/* Load Comments now */}
-      <Embed websiteId={11257} id={} />
+      <Embed websiteId={11257} id={''} />
     </div>
   );
 };
