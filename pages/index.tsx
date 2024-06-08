@@ -19,7 +19,8 @@ import Greeting from '@/components/homepage/Greeting';
 import PopularTags from '@/components/homepage/PopularTags';
 
 import { HyvorTalkEmbed } from 'hyvor-talk-react';
-import React, { useEffect } from 'react';
+import { Embed, CommentCount } from 'hyvor-talk-react-typescript';
+import React from 'react';
 
 const MAX_DISPLAY = 3;
 
@@ -30,7 +31,7 @@ export const getStaticProps = async () => {
   return { props: { posts } };
 };
 
-const Home: React.FC<{ posts: Blog[] }> = ({ posts }) => {
+export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { headerTitle, title, description } = siteMetadata;
 
   return (
@@ -120,25 +121,20 @@ const Home: React.FC<{ posts: Blog[] }> = ({ posts }) => {
   );
 };
 
-const BlogPost: React.FC = () => {
-  useEffect(() => {
-    const comments = document.createElement('hyvor-talk-comments');
-    comments.setAttribute('website-id', '11257');
-    comments.setAttribute('page-id', '');
-    document.getElementById('comments-wrap')?.appendChild(comments);
-
-    return () => {
-      // Cleanup function: remove the created element when the component is unmounted
-      document.getElementById('comments-wrap')?.removeChild(comments);
-    };
-  }, []); // Run once when the component mounts
-
+const Article: React.FC = () => {
   return (
     <div>
-      {/* Your blog content */}
-      <div id="comments-wrap"></div>
+      <h1>Article Title</h1>
+
+      <div className="comment-count-view">
+        {/* Comment Counts */}
+        <CommentCount websiteId={11257} id={} />
+      </div>
+
+      <content>Your Article Here</content>
+
+      {/* Load Comments now */}
+      <Embed websiteId={YOUR_WEBSITE_ID} id={WEBPAGE_IDENTIFIER} />
     </div>
   );
 };
-
-export default BlogPost;
