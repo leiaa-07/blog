@@ -127,11 +127,11 @@ export const Article: React.FC = () => {
 
       <div className="comment-count-view">
         {/* Comment Counts */}
-        <CommentCount websiteId={11257} id={''} />
+        <CommentCount websiteId={11257} id={blog} />
       </div>
 
       {/* Load Comments now */}
-      <Embed websiteId={11257} id={homepage} />
+      <Embed websiteId={11257} id={blog} />
     </div>
   );
 };
