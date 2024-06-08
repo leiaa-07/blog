@@ -18,6 +18,11 @@ import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import PopularTags from '@/components/homepage/PopularTags';
 
+import React from 'react';
+import { HyvorTalkEmbed } from 'hyvor-talk-react';
+
+export default BlogPost;
+
 const MAX_DISPLAY = 3;
 
 export const getStaticProps = async () => {
@@ -62,6 +67,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             recent posts
           </h1>
         </div>
+
+        const BlogPost = () => {
+          return (
+            <div>
+              <HyvorTalkEmbed websiteId={YOUR_WEBSITE_ID} />
+            </div>
+          );
+        };
 
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'no posts found'}
