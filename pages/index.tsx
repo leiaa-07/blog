@@ -20,6 +20,7 @@ import PopularTags from '@/components/homepage/PopularTags';
 
 import React from 'react';
 import { HyvorTalkEmbed } from 'hyvor-talk-react';
+import React, { useEffect } from 'react';
 
 export default BlogPost;
 
@@ -122,10 +123,25 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   );
 }
 
-const BlogPost = () => {
+const BlogPost: React.FC = () => {
+  useEffect(() => {
+    const comments = document.createElement("hyvor-talk-comments");
+    comments.setAttribute('website-id', '11257');
+    comments.setAttribute('page-id', '');
+    document.getElementById("comments-wrap")?.appendChild(comments);
+
+    return () => {
+      // Cleanup function: remove the created element when the component is unmounted
+      document.getElementById("comments-wrap")?.removeChild(comments);
+    };
+  }, []); // Run once when the component mounts
+
   return (
     <div>
-      <HyvorTalkEmbed websiteId={YOUR_WEBSITE_ID} />
+      {/* Your blog content */}
+      <div id="comments-wrap"></div>
     </div>
   );
 };
+
+export default BlogPost;
