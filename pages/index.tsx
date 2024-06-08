@@ -131,7 +131,7 @@ export const Article: React.FC = () => {
       </div>
 
       {/* Load Comments now */}
-      <Embed websiteId={11257} id={''} />
+      <Embed websiteId={11257} id={homepage} />
     </div>
   );
 };
