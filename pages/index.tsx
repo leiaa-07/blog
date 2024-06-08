@@ -68,14 +68,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </h1>
         </div>
 
-        const BlogPost = () => {
-          return (
-            <div>
-              <HyvorTalkEmbed websiteId={YOUR_WEBSITE_ID} />
-            </div>
-          );
-        };
-
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'no posts found'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
@@ -129,3 +121,11 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
     </div>
   );
 }
+
+const BlogPost = () => {
+  return (
+    <div>
+      <HyvorTalkEmbed websiteId={YOUR_WEBSITE_ID} />
+    </div>
+  );
+};
