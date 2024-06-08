@@ -16,7 +16,7 @@ interface Props {
 export default function AuthorLayout({ children, content, toc }: Props) {
   const { title, headerTitle } = siteMetadata;
 
-  const description = 'My professional career, experiences, and skills.';
+  const description = 'hallo wassupp';
 
   return (
     <>
