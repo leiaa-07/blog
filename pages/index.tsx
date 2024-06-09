@@ -139,7 +139,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         </div>
       )} */}
 
-       {/* Comments Section */}
       <Comments />
     </div>
   );
