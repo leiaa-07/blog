@@ -30,6 +30,28 @@ export const getStaticProps = async () => {
   return { props: { posts } };
 };
 
+function Comments() {
+  useEffect(() => {
+    addComments(
+      {
+        'website-id': 11257, // Your Hyvor Talk website ID
+        'page-id': '', // Unique page ID, you can change this as needed
+      },
+      document.getElementById('comments-container'),
+      (event, data) => {
+        console.log(event, data);
+      }
+    );
+  }, []);
+
+  return (
+    <div>
+      <h1>Comments Section</h1>
+      <div id="comments-container"></div>
+    </div>
+  );
+}
+
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { headerTitle, title, description } = siteMetadata;
 
@@ -116,31 +138,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           <NewsletterForm />
         </div>
       )} */}
+
+       {/* Comments Section */}
+      <Comments />
     </div>
   );
 }
-
-const Home: React.FC = () => {
-  useEffect(() => {
-    addComments(
-      {
-        'website-id': 11257, // Your Hyvor Talk website ID
-        'page-id': '', // Unique page ID, you can change this as needed
-      },
-      document.getElementById('comments-container'),
-      (event, data) => {
-        console.log(event, data);
-      }
-    );
-  }, []);
-
-  return (
-    <div>
-      <h1>Home Page</h1>
-      {/* Comments Section */}
-      <div id="comments-container"></div>
-    </div>
-  );
-};
-
-export default Home;
