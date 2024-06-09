@@ -32,25 +32,25 @@ export const getStaticProps = async () => {
 
 function Comments() {
   useEffect(() => {
-   const script = document.createElement('script');
-   script.src = 'https://talk.hyvor.com/embed/embed.js';
-   script.async = true;
-   script.type = 'module';
-   document.head.appendChild(script);
+    const script = document.createElement('script');
+    script.src = 'https://talk.hyvor.com/embed/embed.js';
+    script.async = true;
+    script.type = 'module';
+    document.head.appendChild(script);
 
-   script.onload = () => {
-     addComments(
-       {
-         'website-id': 11257, // Your Hyvor Talk website ID
-         'page-id': '', // Unique page ID, you can change this as needed
-         },
-       document.getElementById('comments-container'),
-       (event, data) => {
-         console.log(event, data);
-       }
-     );
-   };
- }, []);
+    script.onload = () => {
+      addComments(
+        {
+          'website-id': 11257, // Your Hyvor Talk website ID
+          'page-id': '', // Unique page ID, you can change this as needed
+        },
+        document.getElementById('comments-container'),
+        (event, data) => {
+          console.log(event, data);
+        }
+      );
+    };
+  }, []);
 
   return (
     <div>
