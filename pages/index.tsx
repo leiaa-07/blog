@@ -18,7 +18,8 @@ import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import PopularTags from '@/components/homepage/PopularTags';
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { addComments } from '@hyvor/hyvor-talk-base';
 
 const MAX_DISPLAY = 3;
 
@@ -118,3 +119,28 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
     </div>
   );
 }
+
+const Home: React.FC = () => {
+  useEffect(() => {
+    addComments(
+      {
+        'website-id': 11257, // Your Hyvor Talk website ID
+        'page-id': '', // Unique page ID, you can change this as needed
+      },
+      document.getElementById('comments-container'),
+      (event, data) => {
+        console.log(event, data);
+      }
+    );
+  }, []);
+
+  return (
+    <div>
+      <h1>Home Page</h1>
+      {/* Comments Section */}
+      <div id="comments-container"></div>
+    </div>
+  );
+};
+
+export default Home;
