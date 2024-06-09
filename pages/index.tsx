@@ -32,6 +32,7 @@ export const getStaticProps = async () => {
 
 function Comments() {
   useEffect(() => {
+    console.log("Comments component rendered");
     const script = document.createElement('script');
     script.src = 'https://talk.hyvor.com/embed/embed.js';
     script.async = true;
