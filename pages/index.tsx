@@ -18,7 +18,7 @@ import Image from '@/components/Image';
 import Greeting from '@/components/homepage/Greeting';
 import PopularTags from '@/components/homepage/PopularTags';
 
-import React, {useEffect} from 'react';
+import React from 'react';
 
 const MAX_DISPLAY = 3;
 
