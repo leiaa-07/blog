@@ -58,7 +58,7 @@ function Comments() {
       <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
         comments lol
       </h1>
-      <div className="mt-8 border-b border-gray-200 dark:border-gray-700"></div>
+      <div className="mt-6 border-b border-gray-200 dark:border-gray-700"></div>
       <div id="comments-container"></div>
     </div>
   );
