@@ -16,11 +16,9 @@ export default function AuthorLayout({ children, content }: Props) {
 
   const { title, headerTitle } = siteMetadata;
 
-  const description = 'hallo wassup';
-
   return (
     <>
-      <PageSEO title={`about me - ${title}`} description={description} />
+      <PageSEO title={`about me - ${title}`} description='hallo wassup' />
 
       <div className="about divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
