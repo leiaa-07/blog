@@ -18,7 +18,7 @@ export default function AuthorLayout({ children, content }: Props) {
 
   return (
     <>
-      <PageSEO title={`about me - ${title}`} description='hallo wassup' />
+      <PageSEO title={`about me - ${title}`} description="hallo wassup" />
 
       <div className="about divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
