@@ -1,4 +1,3 @@
-import { Comments } from 'pliny/comments';
 import { CoreContent } from 'pliny/utils/contentlayer';
 
 import type { Blog } from 'contentlayer/generated';
@@ -12,7 +11,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment';
 import BlogMeta from '@/components/blog/BlogMeta';
 import BlogTags from '@/components/blog/BlogTags';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 import { addComments } from '@hyvor/hyvor-talk-base';
 
 function Comments() {
@@ -37,6 +36,9 @@ function Comments() {
       );
     };
   }, []);
+  
+  return <div id="comments-container"></div>;
+}
 
 interface LayoutProps {
   content: CoreContent<Blog>;
