@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { Comments } from 'pliny/comments';
 import { CoreContent } from 'pliny/utils/contentlayer';
 
@@ -12,6 +11,32 @@ import { BlogSEO } from '@/components/SEO';
 import ScrollTopAndComment from '@/components/ScrollTopAndComment';
 import BlogMeta from '@/components/blog/BlogMeta';
 import BlogTags from '@/components/blog/BlogTags';
+
+import React, { useEffect } from 'react';
+import { addComments } from '@hyvor/hyvor-talk-base';
+
+function Comments() {
+  useEffect(() => {
+    console.log('Comments component rendered');
+    const script = document.createElement('script');
+    script.src = 'https://talk.hyvor.com/embed/embed.js';
+    script.async = true;
+    script.type = 'module';
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      addComments(
+        {
+          'website-id': 11281, // Your Hyvor Talk website ID
+          'page-id': '', // Unique page ID, you can change this as needed
+        },
+        document.getElementById('comments-container'),
+        (event, data) => {
+          console.log(event, data);
+        }
+      );
+    };
+  }, []);
 
 interface LayoutProps {
   content: CoreContent<Blog>;
@@ -50,6 +75,8 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">{children}</div>
             </div>
+
+            <div><Comments /></div>
 
             <footer>
               <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
