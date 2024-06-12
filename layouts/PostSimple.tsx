@@ -11,7 +11,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment';
 import BlogMeta from '@/components/blog/BlogMeta';
 import BlogTags from '@/components/blog/BlogTags';
 
-import ReactNode from 'react';
+import { ReactNode } from 'react';
 
 interface LayoutProps {
   content: CoreContent<Blog>;
