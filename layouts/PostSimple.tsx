@@ -52,7 +52,9 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">{children}</div>
             </div>
 
-            <div><Comments /></div>
+            <div>
+              <Comments />
+            </div>
 
             <footer>
               <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
