@@ -42,7 +42,7 @@ function Comments() {
     script.onload = () => {
       addComments(
         {
-          'website-id': 11340, // Your Hyvor Talk website ID
+          'website-id': 11257, // Your Hyvor Talk website ID
           'page-id': '', // Unique page ID, you can change this as needed
         },
         document.getElementById('comments-container'),
