@@ -14,11 +14,11 @@ p.s. familiarity with QRs + legendre symbol is assumed
 ### (1) the "trick"
 
 some things to look out for:
-- $x^2+1$ is amazing bcs of fermats christmas theorem
+- $x^2+1$ is amazing bcs of fermat's christmas theorem
 - $x^2+(\text{prime})^2$ is pretty good too
 - $x^2+(\text{any number})^2$ is not as good but not bad, depending on the number
 - $x^2+(\text{any number})$ could work well too, but ideally such that its legendre symbol can be easily calculated.
-- $kx^2+(\text{any number})$ can also work by multiplying k on both sides so that we get $(kx)^2$
+- $kx^2+(\text{any number})$ can also work by multiplying $k$ so that we get $(kx)^2$
 
 the reason that $a^2 + b^2$ is so good is cuz if we take some odd prime $p$ s.t. $p \mid a^2 + b^2$ but $p \nmid b$, then this implies that $a^2 \equiv -b^2 \pmod{p}$ so $-b^2$ is a QR $\pmod{p}$. taking legendre symbols, this means $(-b^2/p) = (-1/p)(b/p)^2 = 1$. note that we must have $(b/p)^2 = 1$, so $(-1/p) = 1$ and it's well-known that this implies $p \equiv 1 \pmod{4}$.
 
