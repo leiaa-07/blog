@@ -1,0 +1,64 @@
+---
+title: 'quadratic residues "trick"'
+date: '2024-06-28'
+lastmod: '2024-06-28'
+tags: ['#math']
+summary: 'sum of 2 squares ftw'
+layout: PostSimple
+---
+
+HALLOOO so within the past 2 days, i've encountered this QR trick (or, more like, technique ig?) NUMEROUS times while doing NT, but i missed it like 2 weeks ago during a mock ripp, so yea why not dump it here? :D
+
+p.s. familiarity with QRs + legendre symbol is assumed
+
+### (1) the "trick"
+
+some things to look out for:
+- $x^2+1$ is amazing bcs of fermats christmas theorem
+- $x^2+(\text{prime})^2$ is pretty good too
+- $x^2+(\text{any number})^2$ is not as good but not bad, depending on the number
+- $x^2+(\text{any number})$ could work well too, but ideally such that its legendre symbol can be easily calculated.
+- $kx^2+(\text{any number})$ can also work by multiplying k on both sides so that we get $(kx)^2$
+
+the reason that $a^2 + b^2$ is so good is cuz if we take some odd prime $p$ s.t. $p \mid a^2 + b^2$ but $p \nmid b$, then this implies that $a^2 \equiv -b^2 \pmod{p}$ so $-b^2$ is a QR $\pmod{p}$. taking legendre symbols, this means $(-b^2/p) = (-1/p)(b/p)^2 = 1$. note that we must have $(b/p)^2 = 1$, so $(-1/p) = 1$ and it's well-known that this implies $p \equiv 1 \pmod{4}$.
+
+so the trick is basically this: given some equation with (ideally) one of those above expressions, consider a prime $p$ dividing that expression then juice out info abt $p$ (mod smth, usually 4 or 8) by considering its legendre symbol and applying well-known results. common examples are
+- $p \equiv 1 \pmod{4}$ if $p > 2$ and $p \mid x^2+1$ (aka fermat's christmas theorem)
+- $p \equiv \pm 1 \pmod{8}$ if $p > 2$ and $p \mid x^2 - 2$
+- $p \equiv 1 \pmod{4}$ if $p \nmid k$ and $p \mid x^2+k^2$
+
+now here's an example of how the trick works: suppose u've proven that all prime divisors of LHS are $1 \pmod{4}$, or in other words, every factor of LHS is $1 \pmod{4}$. but suppose there's a factor on RHS that's $3 \pmod{4}$. then BOOM u hv a contradiction yippee. okay hope that made sense. otherwise just ignore this horrible explanation and check out the examples :D
+
+---
+
+### (2) examples
+these 4 probles use a very direct application of this trick. btw i'll gloss over a lot of details, but the point is to demonstrate the main idea of the technique.  
+
+> [**IMOSL 1984**](https://artofproblemsolving.com/community/c6h365823p2012306): Prove that if $m, n$ are positive integers, then $4mn-m-n$ can not be a perfect square.
+
+suppose $4mn - m - n = k^2$, which can be rewritten as $(4m-1)(4n-1) = (2k)^2+1$. observing the familiar form on RHS, we employ our trick. suppose $p > 2$ is a prime dividing $(2k)^2+1$. then, $p \equiv 1 \pmod{4}$ by fermat's christmas theorem, so every factor of RHS is $1 \pmod{4}$. but this is clearly a contradiction bcs on the LHS, the factor $4m-1 \equiv 3 \pmod{4}$. BOOM. ✨
+
+> [**IZhO 2005 P1**](https://artofproblemsolving.com/community/c6h184045p1011637): Prove that the equation $x^{5} + 31 = y^{2}$ has no integer solution.
+
+naturally, we $+1$ to both sides to obtain $x^5 + 2^5 = y^2 + 1$. then, mod 4 analysis (which is natural to determine parity) shows us that we must have $x \equiv 1 \pmod{4}$ and $y$ even. RHS is familiar so it's time for our trick yay. suppose $p$ is a prime dividing $y^2 + 1$. note that $p$ is odd bcs $y^2 + 1$ is odd, so $p \equiv 1 \pmod{4}$ by fermat's christmas theorem, implying that every factor of RHS is $1 \pmod{4}$. but on the LHS, $x + 2$ is a factor of $x^5 + 2^5$ and $x + 2 \equiv 3 \pmod{4}$. TADAAA the desired contradiction. ✨
+
+> [**USA TST 2008 P4**](https://artofproblemsolving.com/community/c6h67251p396369): Prove that for no integer $n$ is $n^7 + 7$ a perfect square.
+
+yup same technique. (this is boring by now, huh?) suppose $n^7 + 7 = k^2$, then $+11^2$ to both sides to obtain $n^7 + 2^7 = k^2 + 11^2$. again, mod 4 analysis shows us that $n \equiv 1 \pmod{4}$. yep RHS is familiar so suppose $p \neq 11$ is a prime dividing $k^2 + 11^2$. then, $p \equiv 1 \pmod{4}$. but on the LHS, $n + 2$ is a factor of $n^7 + 2^7$ and $n + 2 \equiv 3 \pmod{4}$, so contradiction if 11 doesn't divide $k^2 + 11^2$. thus, 11 divides $k$ and we can finish off with LTE (which i'll skip here) yayyy. ✨
+
+> [**IMOLL 1992**](https://artofproblemsolving.com/community/c6h364917p2005749): Let $a, b$ be integers. Prove that $\frac{2a^2 - 1}{b^2 + 2}$ is never an integer.
+
+suppose $2a^2 - 1 = k (b^2 + 2)$ for some integer $k$. analysing parities shows that $b$ must be odd. what next? u guessed it, we apply our trick again yaaaaay. suppose $p > 2$ is a prime dividing $2a^2 - 1$, implying that $p$ divides $4a^2 - 2 = (2a)^2 - 2$. hence, 2 is a QR $\pmod{p}$, so $p \equiv \pm 1 \pmod{8}$. yeap so every factor of LHS is $\pm 1 \pmod{8}$. but on the RHS, the factor $b^2 + 2 \equiv 3 \pmod{8}$. contradictionnnn. ✨
+
+
+### (3) the problem i failed to solve
+
+> [**Indian-Iranian Friendly Competition 2024 P4**](https://artofproblemsolving.com/community/q2h3338507p30923345): Prove that there are no integers $x, y, z$ satisfying the equation $$x^2+y^2-z^2=xyz-2.$$
+
+the first natural thing to do is probably observe parities, and it's possible to show that at most one of $x, y, z$ is even. (this was literally the only thing i did during the mock LMAO.) then, we shd rewrite the expression as a quadratic in $z$, and consider its discriminant which has to be a perfect square by our contrary assumption (bcs $x, y$ are symmetric, so taking the discriminant of the quadratic in $z$ will give us a nice symmetric equation). hence, suppose $$\text{discriminant} = (xy)^2 + 4(x^2+y^2+2)=k^2 \implies (x^2+4)(y^2+4)=k^2+8.$$ from here on, it's much easier, and we proceed with the standard trick after recognising the sum of squares i.e. $x^2+2^2$. recall that at most one of $x, y, z$ is even. hence, assume WLOG that $x$ is odd, so $x^2 + 2^2$ only has odd factors. suppose $p > 2$ is a prime dividing $x^2 + 2^2$, which would imply $p \equiv 1 \pmod{4}$. then, we also have that $p$ divides $k^2 + 8$, implying that 2 is a QR $\pmod{p}$, so $p \equiv \pm 1 \pmod{8}$. thus, we conclude $p \equiv 1 \pmod{8}$. in other words, every factor of $x^2+4$ is $1 \pmod{8}$. however, $x^2+4 \equiv 5 \pmod{8}$, which is our desired contradiction. ✨
+
+---
+
+yepp damn can't believe i've been blind to this standard trick for so long. but better late than never ig 😭
+
+
