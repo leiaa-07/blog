@@ -7,7 +7,7 @@ summary: 'sum of 2 squares ftw'
 layout: PostSimple
 ---
 
-HALLOOO so within the past 2 days, i've encountered this QR trick (or, more like, technique ig?) NUMEROUS times while doing NT, but i missed it like 2 weeks ago during a mock ripp, so yea why not dump it here? :D
+HALLOOO so within the past 2 days, i've encountered this standard QR trick (or, more like, technique ig?) NUMEROUS times while doing NT, but i missed it like 2 weeks ago during a mock ripp, so yea why not dump it here? :D
 
 p.s. familiarity with QRs + legendre symbol is assumed
 
@@ -56,10 +56,13 @@ suppose $2a^2 - 1 = k (b^2 + 2)$ for some integer $k$. analysing parities shows 
 
 #### [**Indian-Iranian Friendly Competition 2024 P4**](https://artofproblemsolving.com/community/q2h3338507p30923345): Prove that there are no integers $x, y, z$ satisfying the equation $x^2+y^2-z^2=xyz-2.$
 
-the first natural thing to do is probably observe parities, and it's possible to show that at most one of $x, y, z$ is even. (this was literally the only thing i did during the mock LMAO.) then, we shd rewrite the expression as a quadratic in $z$, and consider its discriminant which has to be a perfect square by our contrary assumption (bcs $x, y$ are symmetric, so taking the discriminant of the quadratic in $z$ will give us a nice symmetric equation). hence, suppose discriminant $=(xy)^2 + 4(x^2+y^2+2)=k^2 \implies (x^2+4)(y^2+4)=k^2+8$. from here on, it's much easier, and we proceed with the standard trick after recognising the sum of squares i.e. $x^2+2^2$. recall that at most one of $x, y, z$ is even. hence, assume WLOG that $x$ is odd, so $x^2 + 2^2$ only has odd factors. suppose $p > 2$ is a prime dividing $x^2 + 2^2$, which would imply $p \equiv 1 \pmod{4}$. then, we also have that $p$ divides $k^2 + 8$, implying that 2 is a QR $\pmod{p}$, so $p \equiv \pm 1 \pmod{8}$. thus, we conclude $p \equiv 1 \pmod{8}$. in other words, every factor of $x^2+4$ is $1 \pmod{8}$. however, $x^2+4 \equiv 5 \pmod{8}$, which is our desired contradiction. ✨
+the first natural thing to do is probably observe parities, and it's possible to show that at most one of $x, y, z$ is even. (this was literally the only thing i did during the mock LMAO.) then, we shd rewrite the expression as a quadratic in $z$, and consider its discriminant which has to be a perfect square by our contrary assumption (bcs $x, y$ are symmetric, so taking the discriminant of the quadratic in $z$ will give us a nice symmetric equation). hence, suppose discriminant $=(xy)^2 + 4(x^2+y^2+2)=k^2 \implies (x^2+4)(y^2+4)=k^2+8$.
 
----
+from here on, it's much easier, and we proceed with the standard trick after recognising the sum of squares i.e. $x^2+2^2$. recall that at most one of $x, y, z$ is even. hence, assume WLOG that $x$ is odd, so $x^2 + 2^2$ only has odd factors. suppose $p > 2$ is a prime dividing $x^2 + 2^2$, which would imply $p \equiv 1 \pmod{4}$. then, we also have that $p$ divides $k^2 + 8$, implying that 2 is a QR $\pmod{p}$, so $p \equiv \pm 1 \pmod{8}$. thus, we conclude $p \equiv 1 \pmod{8}$. in other words, every factor of $x^2+4$ is $1 \pmod{8}$. however, $x^2+4 \equiv 5 \pmod{8}$, which is our desired contradiction. ✨
 
 yepp damn can't believe i've been blind to this standard trick for so long. but better late than never ig 😭
 
+---
 
+<script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+<hyvor-talk-comments website-id="11281" page-id="https://leia-mayssa.vercel.app/blog/quadratic%20residues%20%22trick%22"></hyvor-talk-comments>
