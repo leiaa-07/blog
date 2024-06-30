@@ -23,9 +23,9 @@ some things to look out for:
 the reason that $a^2 + b^2$ is so good is cuz if we take some odd prime $p$ s.t. $p \mid a^2 + b^2$ but $p \nmid b$, then this implies that $a^2 \equiv -b^2 \pmod{p}$ so $-b^2$ is a QR $\pmod{p}$. taking legendre symbols, this means $(-b^2/p) = (-1/p)(b/p)^2 = 1$. note that we must have $(b/p)^2 = 1$, so $(-1/p) = 1$ and it's well-known that this implies $p \equiv 1 \pmod{4}$.
 
 so the trick is basically this: given some equation with (ideally) one of those above expressions, consider a prime $p$ dividing that expression then juice out info abt $p$ (mod smth, usually 4 or 8) by considering its legendre symbol and applying well-known results. common examples are
-- $p \equiv 1 \pmod{4}$ if $p > 2$ and $p \mid x^2+1$ (aka fermat's christmas theorem)
-- $p \equiv \pm 1 \pmod{8}$ if $p > 2$ and $p \mid x^2 - 2$
-- $p \equiv 1 \pmod{4}$ if $p \nmid k$ and $p \mid x^2+k^2$
+- $p \equiv 1 \pmod{4}$ if $p > 2$ and $p \mid x^2+1$ i.e. -1 is a QR (aka fermat's christmas theorem)
+- $p \equiv \pm 1 \pmod{8}$ if $p > 2$ and $p \mid x^2 - 2$ i.e. 2 is a QR
+- $p \equiv 1 \pmod{4}$ if $p > 2$, $p \nmid k$ and $p \mid x^2+k^2$ i.e. -1 is a QR
 
 now here's an example of how the trick works: suppose u've proven that all prime divisors of LHS are $1 \pmod{4}$, or in other words, every factor of LHS is $1 \pmod{4}$. but suppose there's a factor on RHS that's $3 \pmod{4}$. then BOOM u hv a contradiction yippee. okay hope that made sense. otherwise just ignore this horrible explanation and check out the examples :D
 
