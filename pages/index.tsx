@@ -89,7 +89,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400"
         style={{ marginTop: '-20px' }}
       >
-        current status (26/7): officially done with imo 2024!! do i be happy or sad?? 😭
+        current status (20/8): focusing on everything BUT school 😐
       </p>
 
       {/* List all post */}
