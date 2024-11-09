@@ -14,8 +14,7 @@ const BlogMeta = ({ date, slug, readingTime }: BlogMetaProps) => {
       </time>
       <span className="mx-2">{` • `}</span>
       <div className="flex items-center">
-        ⏳
-        <span className="ml-1.5 md:ml-2">{Math.ceil(0.5 * readingTime.minutes)} mins read</span>
+        ⏳<span className="ml-1.5 md:ml-2">{Math.ceil(0.5 * readingTime.minutes)} mins read</span>
       </div>
     </dd>
   );
