@@ -1,0 +1,36 @@
+---
+title: 'two "find all solutions" NT'
+date: '2024-12-24'
+lastmod: '2024-12-24'
+tags: ['#math']
+summary: 'which i failed to solve in a mock :('
+layout: PostSimple
+---
+
+### (1) Find all positive integers $m,n\geq 2$, such that (i) $m+1$ is a prime number of type $4k-1$; (ii) there is a (positive) prime number $p$ and nonnegative integer $a$, such that
+### $$\frac{m^{2^n-1}-1}{m-1}=m^n+p^a.$$
+first of all, my progress during the mock for this problem (i spent like 1.5hrs) was like RLLY BAD lmao. all i had was $n$ even $\implies p=m+1$ and $a$ odd. but anyway lemme spoil to u what i failed to realise: $$\frac{m^{2^n}-1}{m-1}=(m+1)(m^2+1) \cdots (m^{2^{n-1}}+1)$$ i COMPLETELY missed that T-T. but if u're not blind like me, u could then rewrite the equation as $$\frac{m^{2^n}-1}{m-1}-(m^{n+1}+1)=(m+1)(m^2+1) \cdots (m^{2^{n-1}}+1)-(m^{n+1}+1)=mp^a.$$
+now naturally, what would be nice is if we could find/force a factor for LHS. well, the first part of LHS might suggest forcing a factor of $m^{2^k}+1$, but we'll need this to divide the second part of LHS (i.e. $m^{n+1}+1$) as well. and indeed, if we take $k=v_2(n+1)$, this works! furthermore, $m^{2^k}+1$ and $m$ are clearly coprime, so $$m^{2^k}+1 \mid p^a \implies m^{2^k}+1=p^b.$$ but notice that $k \geq 1$ implies $-1$ is a QR mod $p$, so $p \equiv 1 \pmod{4}$ by fermat's christmas theorem, but this is clearly a contradiction by the first condition in the problem statement! so we must have $k=v_2(n+1)=0 \implies$ $n$ is even.
+yay now my 1.5hrs of work is fruitful here lol rip. by taking mod $m+1$ in the original equation, we find that $$p^a \equiv 0 \pmod{m+1} \implies p=m+1.$$ plugging this back into our original equation, we have that $$p+m^2+m^3+\cdots+m^{2^n-2}=frac{m^{2^n-1}-1}{m-1}=m^n+p^a.$$
+then assuming $n \geq 3$, taking mod 8 gives $$p+4 \equiv p^a \pmod{8},$$ which we can verify is a contradiction by recalling that $p \equiv 3, 7 \pmod{8}$. finally, we check $n=2$ to show that the solutions are $$(m, n)=(p-1,2)$$ where $p$ is a prime of the form $4k-1$. ✨
+
+### (2) Find all $(k, n)$ positive integers such that $n!-3n+28=k^2$.
+my thought process was smth like this: first, there's a factorial, which means i can easily make it divisible by stuff, so e.g. convenient for taking mods. also, the coeff of $n$ is 3, so it's kinda natural to just try mod 3 and assume $n \geq 3$, which unfortunately doesnt give much since $28 \equiv 1 mod \pmod{3}$. (the problem is gg if it was like 29 tho, cuz 2 is not a QR mod 3.) okay but then RHS is $k^2$, so this instantly makes me think of the QR trick (link). and since mod 3 is natural like i mentioned, i basically added 2 on both sides to force LHS div by 3, and also because i can easily do stuff with the legendre symbol for -2. okay so what we hv now is $$n!-3n+30=k^2+2.$$
+so in an ideal world, i would hope that if i had some odd prime $p$ dividing $k^2+2$, then i can conclude smth abt p and pray that p=3 doesn't satisfy it (so it would imply $n < 3$). e.g. if i must hv $p \equiv 1 \pmod{8}$, that would be great. butttt unfortunately... $$\left( \frac{-2}{p} \right) = \left( \frac{-1}{p} \right) \left( \frac{2}{p} \right) = (-1)^{\frac{p-1}{2}}(-1)^{\frac{p^2-1}{8}} = 1 \implies p \equiv 1, 3 \pmod{8}$$
+so $p = 3$ isn't a contradiction, and i pretty much just left it at that :(
+
+okay now this next part is after i spoiled a bit of the sol to myself hehe: basically the idea of using QR trick is right, but what i missed is another factor of LHS that i can force. notice that $$n!-3n+30=n!-3(n-10).$$
+i was so fixated on the 3 that i didnt even think abt $(n-10)$ lol, and that's a pretty key step. so let's assume $n \geq 11$ so that $(n-10)$ divides $n!$
+and now we can sort of apply a similar thing, where we consider any odd prime dividing $(n-10$... waait.. but what if $(n-10)$ is even (which is generally less ideal when applying QR trick). BUT, notice that $$n!-3n+30=(n-10)(\frac{n!}{n-10}-3),$$
+and $(\frac{n!}{n-10}-3)$ is always odd yayyy. so we'll just take that factor instead. cool, so again, by our work earlier, any odd prime $p$ dividing $(\frac{n!}{n-10}-3)$ must satisfy $p \equiv 1, 3 \pmod{8}$. but notice that $$(\frac{n!}{n-10}-3) \equiv -3 \equiv 5 \pmod{8},$$ which means it's impossible for all of its prime factors to be $1, 3 \pmod{8}$, so we have our desired contradiction! this means that $n < 11$, and we can just verify $1 \leq n \leq 10$ which i won't show here, but the only solution is $(3, 5).$ ✨
+
+alternatively, if u still wanted to use the $(n-10)$ factor, here's how it'd go:
+case 1: the ideal case where $n-10$ is odd
+again, all of it's prime factors are $1, 3 \pmod{8}$, so $n \equiv 3, 5 \pmod{8}$. but plugging this into our equation, it means that $k^2 \equiv 3, 5 \pmod{8}$, which is a contradiction.
+case 2: the less ideal case where $n-10$ is even (which also means $k^2$ is even)
+case 2.1: $k^2 \equiv 0 \pmod{8}$
+notice that $k^2 \equiv 0 \pmod{8} \implies k^2 \equiv 0 \pmod{16} \implies n \equiv 4 \pmod{16}.$ thus, $n-10=(16n'+4)-10=2(8n'-3).$ now, considering the factor $8n'-3$, then by our previous work, $8n'-3 \equiv 1, 3 \pmod{8},$ which is clearly false. (notice how we still end up considering an odd factor.)
+case 2.2: $k^2 \equiv 4 \pmod{8}$
+we get that $n \equiv 8 \pmod{16}$, so $n-10=2(8n'-1)$ and we arrive at a contradiction similar to the above case.
+
+okay that's it, GOOD NIGHT
