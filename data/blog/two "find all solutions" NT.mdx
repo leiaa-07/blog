@@ -22,7 +22,8 @@ $$\frac{m^{2^n}-1}{m-1}-(m^{n+1}+1)=(m+1)(m^2+1) \cdots (m^{2^{n-1}}+1)-(m^{n+1}
 now naturally, what would be nice is if we could find/force a factor for LHS. well, the first part of LHS might suggest forcing a factor of $m^{2^k}+1$, but we'll need this to divide the second part of LHS (i.e. $m^{n+1}+1$) as well. and indeed, if we take $k=v_2(n+1)$, this works! furthermore, $m^{2^k}+1$ and $m$ are clearly coprime, so 
 <center>
 $$m^{2^k}+1 \mid p^a \implies m^{2^k}+1=p^b.$$
-</center>but notice that $k \geq 1$ implies $-1$ is a QR mod $p$, so $p \equiv 1 \pmod{4}$ by fermat's christmas theorem, but this is clearly a contradiction by the first condition in the problem statement! so we must have $k=v_2(n+1)=0 \implies$ $n$ is even.
+</center>
+but notice that $k \geq 1$ implies $-1$ is a QR mod $p$, so $p \equiv 1 \pmod{4}$ by fermat's christmas theorem, but this is clearly a contradiction by the first condition in the problem statement! so we must have $k=v_2(n+1)=0 \implies$ $n$ is even.
 
 yay now my 1.5hrs of work is fruitful here lol rip. by taking mod $m+1$ in the original equation, we find that 
 <center>
