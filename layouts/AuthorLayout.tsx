@@ -33,8 +33,9 @@ export default function AuthorLayout({ children, content }: Props) {
 
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{year}</div>
-            <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
-            <div className="text-gray-500 dark:text-gray-400">{company}</div>
+            <div className="text-gray-500 dark:text-gray-400">{school}</div>
+            <div className="text-gray-500 dark:text-gray-400">{uni}</div>
+            <div className="text-gray-500 dark:text-gray-400">{imo}</div>
           </div>
 
           <div className="prose max-w-none pb-8 dark:prose-dark xl:col-span-2">{children}</div>
