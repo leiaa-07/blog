@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-  const { name, avatar, year, school, uni, imo, email, twitter, linkedin, github } = content;
+  const { name, avatar, occupation, company, email, twitter, linkedin, github } = content;
 
   const { title, headerTitle } = siteMetadata;
 
