@@ -89,7 +89,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400"
         style={{ marginTop: '-20px' }}
       >
-        current status (15/5): why is there sm to do ☹️
+        current status (3/6): crashing out 🤘🏻💔
       </p>
 
       {/* List all post */}
