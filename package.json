@@ -6,7 +6,7 @@
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "postinstall": "npx prisma generate",
-    "build": "contentlayer build && node scripts/rss.mjs && next build",
+    "build": "contentlayer build && next build && node scripts/rss.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "prepare": "husky install",
