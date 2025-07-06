@@ -21,7 +21,7 @@ import PopularTags from '@/components/homepage/PopularTags';
 import React, { useEffect } from 'react';
 import { addComments } from '@hyvor/hyvor-talk-base';
 
-const MAX_DISPLAY = 5;
+const MAX_DISPLAY = 2;
 
 export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs) as Blog[];
