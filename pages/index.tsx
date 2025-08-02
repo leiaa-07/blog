@@ -89,7 +89,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400"
         style={{ marginTop: '-20px' }}
       >
-        current status (4/7): pls bully me into studying 🙏🏻
+        current status (3/8): BRUHH MY BLUE HAIR IS GONE 😭💔
       </p>
 
       {/* List all post */}
