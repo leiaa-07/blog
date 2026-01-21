@@ -89,7 +89,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         className="text-2xl font-medium leading-9 tracking-tight text-gray-500 dark:text-gray-400"
         style={{ marginTop: '-20px' }}
       >
-        current status (10/17): alive. anyway look at me using american dates!! 🥰
+        current status (1/21): I WILL POST SOON I PROMISE 💀☝🏻
       </p>
 
       {/* List all post */}
